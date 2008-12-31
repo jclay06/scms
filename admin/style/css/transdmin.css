@@ -1,0 +1,586 @@
+/* css reset */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+
+/* remove textarea resize at Safari */
+textarea { 
+	resize: none;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.center {
+	text-align: center;
+}
+
+p {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+/* ########################################################################## */
+/* main layout */
+
+/* Basic  ---------------------------------------- */
+
+.clear { clear: both; }
+
+body {
+	background: white;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #646464;
+	text-align: center;
+}
+
+#wrapper {
+	text-align: left;
+	width: 930px;
+	margin: 0 auto;
+}
+
+/* Logo  ---------------------------------------- */
+
+h1 {
+	margin: 15px 0 10px 5px;
+	width: 225px;
+	height: 28px;
+	background: url(../img/scms-logo.gif) no-repeat left top;
+}
+
+h1 a {
+	display: block;
+	width: 225px;
+	height: 28px;
+}
+
+h1 span { display: none; }
+
+#returnto {
+	float: right;
+	margin: -35px 5px 0 0;
+	padding: 5px;
+	font-size: 16px;
+}
+#returnto a, #returnto a:visited {
+	text-decoration: none;
+	color: #c66653;
+}
+#returnto a:hover {
+	text-decoration: underline;
+}
+
+/* Main Navigation ---------------------------------------- */
+
+#mainNav {
+	width: 918px;
+	height: 37px;
+	padding: 6px;
+	margin: 0 0 30px 0;
+	background: url(../img/top-menu-bg.gif) no-repeat left top; 
+	/* We used a background image making the thick border and the thin one to keep the html structure simple */
+}
+
+#mainNav li {
+	float: left;
+	height: 37px;
+	border-right: 1px solid #ddd;
+}
+
+#mainNav li a {
+	display: block;
+	float: left;
+	height: 37px;
+	font-weight: bold;
+	line-height: 37px;
+	text-decoration: none;
+	color: #646464;
+	padding: 0 20px;
+}
+
+#mainNav li.logout {
+	float: right;
+	border-left: 1px solid #ddd;
+	border-right: none;
+}
+
+#mainNav li a:hover { background: #fdfcf6; }
+
+#mainNav li a.active, #mainNav li a.active {
+	background: #f0f0f0 url(../img/top-menu-item-bg.gif) repeat-x left top;
+	color: #454545;
+}
+
+/* Container ---------------------------------------- */
+
+#containerHolder {
+	background: #eee;
+	padding: 5px;
+}
+
+
+#container {
+	background: #fff url(../img/content.gif) repeat-y left top;
+	border: 1px solid #ddd;
+	width: 918px;
+}
+
+/* Sidebar ---------------------------------------- */
+
+#sidebar {
+	width: 179px;
+	float: left;
+}
+
+#sidebar .sideNav { width: 179px; }
+
+#sidebar .sideNav li { border-bottom: 1px solid #ddd; width: 179px; }
+
+#sidebar .sideNav li a {
+	display: block;
+	color: #646464;
+	background: #f6f6f6;
+	text-decoration: none;
+	height: 29px;
+	line-height: 29px;
+	padding: 0 19px;
+	width: 141px;
+}
+
+#sidebar .sideNav li a:hover { background: #fdfcf6; }
+
+#sidebar .sideNav li a.active, #sidebar .sideNav li a.active:hover {
+	background: #f0f7fa;
+	color: #c66653;
+}
+
+/* Breadcrumb ---------------------------------------- */
+
+h2 {
+	width: 718px;
+	float: right;
+	color: #646464;
+	font-size: 16px;
+	line-height: 16px;
+	font-weight: bold;
+	margin: 20px 0 0 0;
+	padding: 0 0 10px 0;
+	border-bottom: 1px solid #ddd;
+}
+
+h2 a {
+	color: #646464;
+	text-decoration: none;
+}
+
+h2 a.active { color: #c66653; }
+
+h2 a:hover { text-decoration: underline; }
+
+/* Content ---------------------------------------- */
+
+#main {
+	width: 700px;
+	float: right;
+	padding: 0 19px 0 0;
+}
+
+h3 {
+	font-size: 14px;
+	line-height: 14px;
+	font-weight: bold;
+	color: #5494af;
+	padding: 0 0 0 10px;
+	margin: 20px 0 10px;
+}
+
+#main table {
+	border-top: 1px solid #ddd;
+	width: 700px;
+}
+
+#main table tr td {
+	background: #f6f6f6;
+	padding: 0px 20px;
+	height: 29px;
+	line-height: 29px;
+	border-bottom: 1px solid #ddd;
+}
+
+#main table tr.odd td {
+	background: #fbfbfb;
+}
+
+#main table tr:hover td { background: #fdfcf6; }
+
+#main table .action {
+	text-align: right;
+	padding: 0 20px 0 10px;
+}
+
+#main table tr .action a { margin: 0 0 0 10px; text-decoration: none; color: #9b9b9b; }
+#main table tr:hover .action .edit { color: #c5a059; }
+#main table tr:hover .action .delete { color: #a02b2b; }
+#main table tr:hover .action .view { color: #55a34a; }
+
+#main table tr:hover .action a:hover { text-decoration: underline; }
+
+#main fieldset {
+	border: 1px solid #ddd;
+	padding: 19px;
+	margin: 0 0 20px 0;
+	background: #fbfbfb;
+}
+
+#main fieldset p { margin: 0 0 14px 0; float: left; width: 100%;  }
+
+#main fieldset label {
+	display: block;
+	width: 100%;
+	margin: 0 0 7px 0;
+	line-height: 12px;
+}
+
+#main fieldset .text-long {
+	border: 1px solid #ddd;
+	background: #fff url(../img/input-shaddow.gif) no-repeat left top;
+	font: 11px Arial, Helvetica, sans-serif;
+	color: #646464;
+	padding: 5px 7px;
+	width: 264px;
+	float: left;
+	margin: 0 10px 0 0;
+}
+
+#main fieldset .text-medium {
+	border: 1px solid #ddd;
+	background: #fff url(../img/input-shaddow.gif) no-repeat left top;
+	font: 11px Arial, Helvetica, sans-serif;
+	color: #646464;
+	padding: 5px 7px;
+	width: 124px;
+	float: left;
+	margin: 0 10px 0 0;
+}
+
+#main fieldset .text-small {
+	border: 1px solid #ddd;
+	background: #fff url(../img/input-shaddow.gif) no-repeat left top;
+	font: 11px Arial, Helvetica, sans-serif;
+	color: #646464;
+	padding: 5px 7px;
+	width: 44px;
+	float: left;
+	margin: 0 10px 0 0;
+}
+
+#main fieldset .text-long:focus, 
+#main fieldset .text-medium:focus,
+#main fieldset .text-small:focus,
+#main fieldset textarea:focus { background: #fdfcf6 url(../img/input-shaddow-hover.gif) no-repeat left top; }
+
+#main fieldset textarea {
+	border: 1px solid #ddd;
+	background: #fff url(../img/input-shaddow.gif) no-repeat left top;
+	font: 11px Arial, Helvetica, sans-serif;
+	color: #646464;
+	padding: 5px 7px;
+	width: 364px;
+	float: left;
+	margin: 0 10px 0 0;
+	height: 148px;
+	overflow: hidden;
+}
+
+.button-submit {
+	font: 11px Arial, Helvetica, sans-serif;
+	color: #646464;
+	width: 94px;
+	height: 29px;
+	cursor: pointer;
+	border: none;
+	background: url(../img/button-submit.gif) no-repeat left top;
+}
+
+acronym, abbr {
+	cursor: help;
+	border-bottom: thin dotted #CCC;
+}
+
+.message {
+	padding: 10px;
+	margin: 10px;
+	background-color: #ffebe8;
+	border-color: #c00;
+	color: red;
+	text-align: center;
+}
+
+#comment_nav {
+	margin: 5px;
+	padding: 5px;
+	text-align: center;
+}
+#comment_nav a, #comment_nav a:visited, #comment_nav span {
+	margin: 2px;
+	padding: 3px;
+	color: #000;
+	font-size: 15px;
+	text-decoration: none;
+	border: 1px solid grey;
+	background: #FFF;
+}
+#comment_nav a:hover {
+	text-decoration: underline;
+	color: blue;
+}
+#comment_nav span.current {
+	background: blue;
+	color: #FFF;
+}
+
+
+/* Footer ---------------------------------------- */
+
+#footer {
+	margin: 10px 0 30px 0;
+	font-size: 11px;
+	line-height: 11px;
+	color: #9B9B9B;
+	padding: 0 0 0 5px;
+}
+
+#footer a { color: #9B9B9B; }
+
+#footer a:hover { text-decoration: none; }
+
+/* ########################################################################## */
+/* jNice */
+
+/* -------------
+ * Buttons
+ * ------------- */
+
+button {
+	margin: 0px;
+	padding: 0px 0px;
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+	height: 29px;
+	display: block;
+	float: left;
+	overflow: visible;
+}
+
+*:first-child+html button[type]{width: 1;} /* IE7 */
+
+button span {
+	background: transparent url(../img/btn_left.gif) no-repeat scroll right top;
+	display: block;
+	padding: 0px 10px 0px 0px; /* sliding doors padding */
+	margin: 0px;
+}
+
+button span span {
+	background: transparent url(../img/btn_right.gif) no-repeat left top;
+	color: #646464;
+	margin: 0;
+	padding: 0 0 0 10px;
+	font: 11px Arial, Helvetica, sans-serif;
+	line-height: 29px;
+	display: block;
+	text-decoration: none;
+}
+
+/* -------------
+ * Inputs
+ * ------------- */
+.jNiceInputWrapper {
+	background: transparent url(../../elements/input_left.gif) no-repeat left top;
+	height: 23px;
+	padding: 0px;
+
+}
+
+.jNiceInputInner {
+	background: transparent url(../../elements/input_right.gif) no-repeat right top;
+	padding: 2px 4px 2px 0px;
+	margin: 0px 0px 0px 4px;
+}
+
+.jNiceInputInner div {
+	height: 19px;
+}
+
+.jNiceInputInner input {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	line-height: 18px;
+	vertical-align: middle;
+	height: 17px;
+	color:#404040;	
+	border: 0;
+	padding: 0px;
+	margin: 0px;
+}
+
+.jNiceSafari .jNiceInputInner div {
+	position: relative;
+	overflow: hidden;
+}
+
+.jNiceSafari input {
+	background-color: none;
+	position: absolute;
+	top: -2px;
+	left: -4px;
+	height: 26px; 
+}
+
+/* -------------
+ * Radios
+ * ------------- */
+.jRadioWrapper {float: left; width: 25px;}
+.jNiceRadio {
+	background: transparent url(../img/radio.gif) no-repeat center top;
+	vertical-align: middle;
+	height: 14px;
+	width: 15px;
+	display:block;/*display: -moz-inline-block;*/
+	margin: 0 10px 0 0;
+}
+
+
+/* -------------
+ * Checkboxes
+ * ------------- */
+.jNiceCheckbox {
+	background: transparent url(../img/checkbox.gif) no-repeat center top;
+	vertical-align: middle;
+	height: 13px;
+	float: left;
+	margin: 0 10px 0 0;
+	width: 14px;
+	display:block;/*display: -moz-inline-block;*/
+}
+
+/* -------------
+ * Checked - Used for both Radio and Checkbox
+ * ------------- */
+.jNiceChecked { background-position: center bottom;}
+
+
+/* -------------
+ * Selects
+ * ------------- */
+.jNiceSelectWrapper {
+	width: 280px;
+	position:relative;
+	height: 26px;
+	float: left;
+	border: none !important;
+}
+
+.jNiceSelectWrapper div span {
+	float: none;
+	position: absolute;
+	width: 250px;
+	height: 26px;
+	background: url(../img/select_left.gif) no-repeat left top;
+	line-height: 18px;
+	font: 11px/11px Arial, Helvetica, sans-serif;
+	color: #646464;
+	padding: 7px 7px 0;
+	overflow: hidden;
+	border: none !important;
+}
+
+.jNiceSelectWrapper div a {
+	display: block;
+	position: absolute;
+	right: 0px;
+	width: 30px;
+	border: none;
+	height: 26px;
+	background: url(../img/select_right.gif) no-repeat center center;
+}
+
+.jNiceSelectWrapper ul {
+	position: absolute;
+	width: 250px !important;
+	top: 26px;
+	left: 0px;
+	list-style: none;
+	background-color: #FFF;
+	display: none;
+	margin: 0px;
+	padding: 0px;
+	border: 1px solid #eaeaea;
+	max-height: 99px;
+	overflow: auto;
+	overflow-y: auto;
+	z-index:100;
+}
+
+.jNiceSelectWrapper ul li { width: auto !important; }
+
+
+.jNiceSelectWrapper ul a {
+	display: block;
+	padding: 7px 7px;
+	text-decoration: none;
+	color: #9b9b9b;
+	font: 11px/11px Arial, Helvetica, sans-serif;
+	background-color: #FFF;
+}
+
+.jNiceSelectWrapper ul a:hover { background:#f6f6f6; }
+.jNiceSelectWrapper ul a.selected { background: #f0f7fa; color: #c66653; }
+
+/* -------------
+ * Hidden - used to hide the original form elements
+ * ------------- */
+.jNiceHidden {display: none;}
